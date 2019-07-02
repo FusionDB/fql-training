@@ -23,8 +23,6 @@ For more information, please refer to [FusionDB Document](http://www.fusionlab.c
 
 Fusiondb is a simple and powerful federated database engine.
 
-## Quickstart
-
 * Start FusionDB
 
 ```
@@ -39,7 +37,7 @@ docker ps -a|grep fdb
 lsof -i :54322
 ```
 
-## Psycopg2 connecting FDB
+* Psycopg2 connecting FusionDB
 
 ```
 import psycopg2

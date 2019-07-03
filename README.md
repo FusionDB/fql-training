@@ -46,16 +46,6 @@ connection = psycopg2.connect("host=localhost port=54322 dbname=default user=fdb
 df = pd.read_sql(sql="SELECT * FROM VALUES (1, 1), (1, 2) AS t(a, b);", con=connection)
 df
 
-## Load HDFS Parquet File
-
-df = pd.read_sql(sql="show databases;", con=connection)
-df = pd.read_sql(sql="show tables;", con=connection)
-
-df = pd.read_sql(sql="load 'hdfs://you_namenode_ip:8020/tmp/t1' format parquet as h1", con=connection)
-
-df = pd.read_sql(sql="select * from h1", con=connection)
-df.head()
-
 ## Load mysql table
 
 df =pd.read_sql(sql="load 'mysql' options('url'='jdbc:mysql://localhost:53306/fdb_test','dbtable'='person','user'= 'root','password'='root') AS mysql_t2;", con=connection)

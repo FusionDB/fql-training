@@ -1,14 +1,10 @@
-FROM centos
+FROM fusiondb/fusiondb:0.1.0-beta
 
-MAINTAINER fusiondb version: 0.1.0-beta
-
-RUN yum install tmux -y
+MAINTAINER fusiondb version: 0.1.1-beta
 
 WORKDIR /ws
 
-COPY jdk1.8.0_112 /opt/jdk1.8.0_112
-
-COPY fusiondb /opt/fusiondb
+COPY fusiondb/assembly /opt/fusiondb/assembly
 
 ADD init.sh /opt/
 

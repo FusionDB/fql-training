@@ -1,2 +1,0 @@
-Spark 2.4.1 (git revision a6e558d) built for Hadoop 3.1.0
-Build flags: -Phadoop-3.1 -Phive -Phive-thriftserver -Pyarn -DskipTests
